@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight movement from bottom */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #E1C5C0;
+    font-family: "League Spartan", serif;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.main-header, .gallery-header, .museum-header, phto-header, .music-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header, .gallery-header {
+    padding-top: 60px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #545454;
+    text-shadow: 3px 3px #fff;
+    font-weight: bold;
+}
+
+
+.header  {
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 3px 3px #545454;
+    font-weight: bold;
+}
+
+.lei, .abby {
+    max-width: 350px;
+    height: auto;
+    border: 5px solid #EDE8D0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.about-lei {
+    display: flex; 
+    margin-left: 50px;
+    padding: 50px;
+}
+
+.details-1, .details-2{
+    padding: 47.5px;
+}
+
+.detail-header-1, .detail-header-2 {
+    font-size: 50px;
+    color: #545454;
+    text-shadow: 3px 3px #fff;
+    font-weight: bold;
+}
+
+.detail-text-1, .detail-text-2, .letter-text {
+    text-indent: 50px;
+    text-align: justify;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 2px 2px #545454;
+    font-weight: 500;
+}
+
+.about-abby, .letter {
+    display: flex;
+    margin-right: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.photo-1, .photo-2, .photo-3 {
+    max-width: 400px;
+    border: 5px solid #EDE8D0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.photo-4, .photo-5, .photo-6, .photo-7, .photo-8 {
+    max-width: 220px;
+    border: 5px solid #EDE8D0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.museum-gallery, .phto-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.phto-header {
+    padding-top: 30px;
+}
+
+.phto-header, .museum-header {
+    padding-bottom: 30px;
+}
+
+.galleries {
+    display: flex;
+    gap: 50px;
+}
+
+.music-container {
+    padding-bottom: 50px;
+}
+
+.song-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.song-2 {
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.song-1 iframe, .song-2 iframe {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.song-1 iframe:hover, .song-2 iframe:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 1024px) {
+    .about-lei, .about-abby, .letter {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .details-1, .details-2 {
+        padding: 20px;
+    }
+
+    .galleries {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    
+    .song-1, .song-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .song-1 iframe, .song-2 iframe {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    .header {
+        font-size: 36px;
+    }
+    
+    .detail-header-1, .detail-header-2 {
+        font-size: 36px;
+    }
+    
+    .detail-text-1, .detail-text-2, .letter-text {
+        font-size: 24px;
+    }
+
+    .lei, .abby {
+        max-width: 60%;
+    }
+
+    .photo-1, .photo-2, .photo-3, 
+    .photo-4, .photo-5, .photo-6, .photo-7, .photo-8 {
+        max-width: 90%;
+    }
+
+    .galleries {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .song-1 iframe, .song-2 iframe {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    .header {
+        font-size: 28px;
+    }
+    
+    .detail-header-1, .detail-header-2 {
+        font-size: 28px;
+    }
+    
+    .detail-text-1, .detail-text-2, .letter-text {
+        font-size: 20px;
+    }
+    
+    .lei, .abby {
+        max-width: 100%;
+    }
+
+    .galleries img {
+        width: 100%;
+    }
+
+    .song-1 iframe, .song-2 iframe {
+        width: 100%;
+    }
+}
